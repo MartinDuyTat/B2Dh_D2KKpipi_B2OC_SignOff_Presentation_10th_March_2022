@@ -1,0 +1,4 @@
+#!/bin/bash
+f=B2Dh_D2KKpipi_B2OC_SignOff_Presentation_10th_March_2022.tex
+pdflatex $f && pdflatex $f
+rm *.aux *.log *.nav *.out *.snm *.toc
