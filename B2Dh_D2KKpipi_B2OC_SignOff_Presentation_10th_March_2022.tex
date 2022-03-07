@@ -87,7 +87,7 @@
     \end{itemize}
     \item{Quasi-GLW: Phase space integrated analysis of $D^0\to h^+h^-\pi^+\pi^-$}
     \begin{itemize}
-      \item{$F_+$ for $D^0\to\pi^+\pi^-\pi^+\pi^-$ from CLEO \href{https://arxiv.org/abs/1709.03467}{JHEP 01 (2018) 144}}
+      \item{$F_+$ for $D^0\to\pi^+\pi^-\pi^+\pi^-$ from CLEO-c data \href{https://arxiv.org/abs/1709.03467}{JHEP 01 (2018) 144}}
       \item{$F_+$ for $D^0\to K^+K^-\pi^+\pi^-$ from LHCb model}
       \begin{itemize}
         \item{Preliminary BESIII analysis of $F_+$ shows good agreement with model}
@@ -268,10 +268,10 @@
 \end{frame}
 
 \subsection{Some minor changes and improvements}
-\begin{frame}{Some minor changes improvements}
+\begin{frame}{Some minor changes and improvements}
   \begin{enumerate}
     \setlength\itemsep{1.5em}
-    \item{$K_S$ veto for $D\to\pi\pi\pi\pi$ added to match the CLEO $F_+$ analysis}
+    \item{$K_S$ veto for $D\to\pi\pi\pi\pi$ added to match the CLEO-c $F_+$ analysis}
     \item{Fit bias is corrected for}
     \item{Fit range reduced from $\SI{5800}{\mega\eV}$ to $\SI{5700}{\mega\eV}$}
     \item{BPGGSZ and quasi-GLW correlations accounted for}
@@ -303,7 +303,7 @@
   \begin{center}
     Uncertainties of BPGGSZ CP observables in units of $10^{-2}$
   \end{center}
-  \footnotesize
+  \scriptsize
   \vspace{0.02cm}
   \begin{center}
     \begin{tabular}{lcccccc} 
@@ -326,6 +326,7 @@
       Low mass physics effects                      & 0.15  & 0.21  & 0.05  & 0.20  & 0.03  & 0.44  \\
       Mass shape                                    & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01  \\
       PID Efficiency                                & 0.03  & 0.03  & 0.02  & 0.02  & 0.04  & 0.01  \\
+      $D$ mixing                                    & 0.00  & 0.02  & 0.01  & 0.02  & 0.00  & 0.00  \\
       \hline
       Total LHCb systematic                         & 0.52  & 0.32  & 1.08  & 0.52  & 0.63  & 0.72  \\
       \hline
@@ -360,10 +361,26 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Binned CP fit}
+\section{CP fit results, including central values (analysis not blind)}
+\begin{frame}{CP fit results}
   \begin{center}
-    {\huge Binned CP fit}
+    {\huge CP fit results}
   \end{center}
+\end{frame}
+
+\begin{frame}{GLW CP observables}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/R_CP.pdf}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/B2DK_Asymmetry.pdf}
+    \end{subfigure}%
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/B2Dpi_Asymmetry.pdf}
+    \end{subfigure}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Binned CP fit}
@@ -371,7 +388,7 @@
     \setlength\itemsep{0.0em}
     \item{PDF shape parameters fixed from global fit}
     \item{$2$ charges, 2 $B$ decays, $2\times 8$ bins $\implies$ $64$ categories}
-    \item{Nuiscence parameters:}
+    \item{Nuisance parameters:}
     \begin{itemize}
       \item{Combinatorial and low mass background ($2\times 64$ parameters)}
       \item{$F_i$ ($15$ parameters)}
@@ -493,6 +510,74 @@
   \begin{center}
     {\huge Thank you!}
   \end{center}
+\end{frame}
+
+\begin{frame}{Backup}
+  \begin{center}
+    {\huge Backup}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Double-peaked error distributions}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/low_dpi_ratio_b2drho_vs_b2dstpi_error.png}
+      \caption{$f_{D\pi\pi}^{D\pi}$}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/low_sigma_pi_fiveL_error.png}
+      \caption{$\sigma_\pi^{\rm low}$}
+    \end{subfigure}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{$s_i$ sign problem}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{Amplitude model gives us: $A(\Phi) = \sum_ka_kS_k(\Phi)$}
+    \item{Flavour-tagged LHCb data measures: $\abs{A(\Phi)}^2$}
+    \item{$a_k$ phase is fixed from phase convention of $S_k(\Phi)$ lineshapes}
+    \item{Physical observable: Interference fractions}
+    \begin{itemize}
+      \item{Toy fit shows that LHCb and CLEO models are \underline{consistent}}
+      \item{Thanks to Tim Evans for checking!}
+    \end{itemize}
+  \end{itemize}
+  \vspace{0.4cm}
+  \begin{tabular}{l|c|c}
+    Resonance                           & LHCb model phase ($\si{\radian}$) & CLEO model ($\si{\radian}$) \\
+    \hline
+    $D^0\to[\phi(1020)\rho^0]_{L = 0}$  & $0$ (fixed)                       & $0$ (fixed) \\
+    $D^0\to K_1(1400)^+K^-$             & $1.05$                            & $-1.79$ \\
+    $D^0\to K_1(1270)^+K^-$             & $2.02$                            & $-2.56$ \\
+    \hline
+  \end{tabular}
+  \vspace{0.4cm}
+\end{frame}
+
+\begin{frame}{$s_i$ sign problem}
+  \begin{itemize}
+    \setlength\itemsep{1.5em}
+    \item{BESIII data can determine sign uniquely!}
+    \item{Reconstruct $KK\pi\pi$ vs $K_{S,L}\pi\pi$ double tags:}
+  \end{itemize}
+  \begin{center}
+    $M_{i, j}\propto\big(K_iK^\prime_{-j} + K_{-i}K^\prime_j \mp 2\sqrt{K_iK_{-i}K^\prime_jK^\prime_{-j}}(c_ic^\prime_j + s_is^\prime_j)\big)$
+  \end{center}
+\end{frame}
+
+\begin{frame}{$s_i$ sign problem}
+  Cross checks:
+  \vspace{0.3cm}
+  \begin{enumerate}
+    \setlength\itemsep{1.5em}
+    \item{Preliminary BESIII results support LHCb model (but not conclusive...)}
+    \item{Same fit code was used in $B\to Dh$, $D\to K_S\pi\pi$ analysis}
+    \item{Same code used to bin events in data and in calculation of $c_i$/$s_i$}
+    \item{Independent binned fit toys are consistent with AmpGen unbinned fit}
+  \end{enumerate}
 \end{frame}
 
 \end{document}
